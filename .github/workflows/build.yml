@@ -27,7 +27,11 @@ jobs:
             --platforms=android \
             --project-name=st_essence \
             --org=com.stessence \
+            --no-pub \
             .
+
+      - name: Remove default test
+        run: rm -rf test
 
       - name: Get dependencies
         run: flutter pub get
